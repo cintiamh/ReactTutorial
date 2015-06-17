@@ -67,3 +67,46 @@ render() {
 * [JSX online compiler](https://facebook.github.io/react/jsx-compiler.html)
 * [Babel: How to use the react transformer](http://babeljs.io/docs/advanced/transformers/other/react/)
 
+We can pass properties to our components when we are building our component hierarchy. `{this.props.name}` Like
+`<MyComponent name="John Doe" />`
+
+## Bundling with Webpack and Babel
+
+* Node.js
+* npm
+* debug
+* superagent
+* Webpack or Browserify
+* Babel: JSX & ES6 => JS ES5
+* [Jest](https://facebook.github.io/jest/) - testing
+
+
+ES5:
+
+```javascript
+var React = require('react/addons');
+
+class MyComponent extends React.Component{...}
+
+module.exports = MyComponent;
+```
+
+ES6:
+
+```javascript
+import React from 'react/addons';
+
+class MyComponent extends React.Component{...}
+
+export default MyComponent;
+```
+
+Webpack is configuration-oriented
+
+```
+$ npm init
+$ npm install --save-dev webpack
+$ npm install --save-dev babel
+$ npm install --save-dev babel-loader
+```
+
